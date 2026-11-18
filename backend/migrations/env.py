@@ -3,12 +3,12 @@ from logging.config import fileConfig
 from alembic import context
 from sqlmodel import SQLModel
 
-from config.config import settings
-from config.dbase import engine
+from backend.app.core.config import settings
+from backend.app.core.dbase import engine
 
 # Import semua model agar terdaftar di SQLModel.metadata.
 # Setiap kali membuat model baru, import juga di sini.
-from models.models import RevokedToken, User  # noqa: F401
+from backend.app.models.user import RevokedToken, User  # noqa: F401
 
 # Objek konfigurasi Alembic (membaca alembic.ini)
 config = context.config

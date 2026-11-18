@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from sqlmodel import text
 
-from api.deps import SessionDep
+from backend.app.api.deps import SessionDep
 
 router = APIRouter(tags=["health"])
 

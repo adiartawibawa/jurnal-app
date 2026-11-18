@@ -92,11 +92,11 @@ jurnal-app/
     ├── models/              # definisi tabel database
     │   └── models.py
     │
-    ├── config/              # pengaturan dan utilitas inti
+    ├── core/                # pengaturan dan utilitas inti
     │   ├── config.py        # membaca .env
     │   ├── dbase.py         # koneksi database dan sesi
     │   ├── security.py      # hash password dan token JWT
-    │   └── email.py         # pengiriman email
+    │   └── mailer.py        # pengiriman email
     │
     └── migrations/          # riwayat perubahan struktur database (dikelola Alembic)
         ├── env.py
@@ -290,7 +290,7 @@ Menambah paket baru: `uv add nama-paket` (otomatis memperbarui `pyproject.toml` 
 | Gejala | Penyebab dan solusi |
 |---|---|
 | `ValidationError ... Field required` saat server dijalankan | File `.env` tidak ditemukan atau ada isian wajib yang kosong. Pastikan perintah dijalankan dari folder `backend/` dan `.env` ada di sana |
-| `ModuleNotFoundError: No module named 'config'` | Perintah dijalankan dari folder yang salah. Pindah ke `backend/` |
+| `ModuleNotFoundError: No module named 'core'` | Perintah dijalankan dari folder yang salah. Pindah ke `backend/` |
 | `connection refused` ke `localhost:5432` | Server PostgreSQL belum berjalan |
 | `password authentication failed` | User atau password di `DATABASE_URL` salah. Karakter khusus pada password (`@`, `#`, `/`, `:`) harus di-encode, misalnya `@` menjadi `%40` |
 | `database "jurnal" does not exist` | Database belum dibuat. Lihat langkah 4 |

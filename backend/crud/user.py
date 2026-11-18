@@ -1,7 +1,7 @@
 from sqlmodel import Session, select
 
-from config.security import get_password_hash, verify_password
-from models.models import User
+from backend.app.core.security import get_password_hash, verify_password
+from backend.app.models.user import User
 from schemas.user import UserRegister
 
 

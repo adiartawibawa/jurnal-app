@@ -4,7 +4,7 @@ from datetime import datetime
 from pydantic import EmailStr
 from sqlmodel import Field, SQLModel
 
-from models.models import UserBase
+from backend.app.models.user import UserBase
 
 
 class UserRegister(SQLModel):

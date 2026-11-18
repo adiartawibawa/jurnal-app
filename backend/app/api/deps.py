@@ -6,11 +6,11 @@ from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from sqlmodel import Session
 
-from config.config import settings
-from config.dbase import get_session
-from config.security import decode_token, password_fingerprint
+from backend.app.core.config import settings
+from backend.app.core.dbase import get_session
+from backend.app.core.security import decode_token, password_fingerprint
 from crud import token as crud_token
-from models.models import User
+from backend.app.models.user import User
 
 # Dependency bersama: endpoint cukup menulis `session: SessionDep`
 SessionDep = Annotated[Session, Depends(get_session)]

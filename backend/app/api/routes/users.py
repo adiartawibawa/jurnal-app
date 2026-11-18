@@ -2,9 +2,9 @@ import uuid
 
 from fastapi import APIRouter, HTTPException, status
 
-from api.deps import CurrentUser, SessionDep
+from backend.app.api.deps import CurrentUser, SessionDep
 from crud import user as crud_user
-from models.models import User
+from backend.app.models.user import User
 from schemas.user import UserPublic, UserRegister
 
 router = APIRouter(prefix="/users", tags=["users"])

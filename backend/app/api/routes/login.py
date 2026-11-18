@@ -6,9 +6,9 @@ import jwt
 from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException
 from fastapi.security import OAuth2PasswordRequestForm
 
-from api.deps import CurrentUser, SessionDep, TokenPayloadDep
-from config.email import send_reset_password_email
-from config.security import (
+from backend.app.api.deps import CurrentUser, SessionDep, TokenPayloadDep
+from backend.app.core.mailer import send_reset_password_email
+from backend.app.core.security import (
     create_access_token,
     create_password_reset_token,
     decode_token,
@@ -16,7 +16,7 @@ from config.security import (
 )
 from crud import token as crud_token
 from crud import user as crud_user
-from models.models import User
+from backend.app.models.user import User
 from schemas.auth import ForgotPasswordRequest, Message, ResetPasswordRequest
 from schemas.token import Token
 

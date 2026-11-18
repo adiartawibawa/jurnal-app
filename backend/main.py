@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
-from api.router import api_router
-from config.config import settings
+from backend.app.api.router import api_router
+from backend.app.core.config import settings
 
 # Instance aplikasi utama (dinamai `app` agar dikenali fastapi dev / uvicorn)
 app = FastAPI(

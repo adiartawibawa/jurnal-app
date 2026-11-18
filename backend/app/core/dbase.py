@@ -2,7 +2,7 @@ from collections.abc import Generator
 
 from sqlmodel import Session, create_engine
 
-from config.config import settings
+from backend.app.core.config import settings
 
 # Engine = pintu koneksi ke PostgreSQL.
 # pool_pre_ping=True memeriksa koneksi lebih dulu agar tidak error karena koneksi basi.
