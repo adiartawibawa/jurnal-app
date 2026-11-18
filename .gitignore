@@ -1,0 +1,32 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# ===== Virtual environment (dibuat ulang dengan `uv sync`) =====
+.venv/
+venv/
+
+# ===== Rahasia & konfigurasi lokal =====
+# File .env berisi password dan SECRET_KEY: JANGAN di-commit.
+.env
+.env.*
+# Pengecualian: contoh isi .env (tanpa rahasia) justru harus di-commit.
+!.env.example
+
+# ===== Editor & sistem operasi =====
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ===== Frontend (jika nanti ditambahkan) =====
+node_modules/
+.nuxt/
+.output/
+dist/
